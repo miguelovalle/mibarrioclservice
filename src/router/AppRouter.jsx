@@ -3,7 +3,7 @@ import { Landing } from '../components/header/Landing';
 import { Login } from '../components/auth/Login';
 import { Header } from '../components/header/Header';
 import { RechargeList } from '../components/recharges/RechargeList';
-import { ShopList } from '../components/commerce/ShopList';
+//import { ShopList } from '../components/commerce/ShopList';
 import { OrderList } from '../components/orders/OrderList';
 import { Pag1RegNeg } from '../components/register/Pag1RegNeg';
 import { Pag2RegNeg } from '../components/register/Pag2RegNeg';
@@ -12,6 +12,7 @@ import { Pag4RegNeg } from '../components/register/Pag4RegNeg';
 import { Pag5RegNeg } from '../components/register/Pag5RegNeg';
 import { PagRules } from '../components/register/PagRules';
 import { SearchList } from '../components/commerce/SearchList';
+import { ShopProfile } from '../components/commerce/ShopProfile';
 
 export const AppRouter = () => {
   return (
@@ -29,7 +30,7 @@ export const AppRouter = () => {
         <Route path='/header' element={<Header />}>
           <Route index element={<Landing />} />
           <Route path='landing' element={<Landing />} />
-          <Route path='shoplist' element={<ShopList />} />
+          <Route path='shopprofile' element={<ShopProfile />} />
           <Route path='orderlist' element={<OrderList />} />
           <Route path='recharges' element={<RechargeList />} />
         </Route>
