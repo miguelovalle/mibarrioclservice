@@ -7,8 +7,6 @@ import {
   Input,
   InputGroup,
   InputLeftAddon,
-  InputLeftElement,
-  InputRightElement,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -85,7 +83,9 @@ export const ModalSearch = ({ isOpen, onClose }) => {
                   justify={'space-between'}
                   w={380}
                 >
-                  <Text bg={'gray.100'} w={330}h={10} >{item.name}</Text>
+                  <Text bg={'gray.100'} w={330} h={10}>
+                    {item.name}
+                  </Text>
                   <IconButton
                     onClick={() => {
                       sessionStorage.setItem('shopName', item.name);

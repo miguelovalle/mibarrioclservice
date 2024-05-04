@@ -62,7 +62,7 @@ export const Header = () => {
           </Flex>
         </Flex>
         <HStack align={'center'} ml={4}>
-          <Breadcrumb spacing='8px' color={'blue.600'}>
+          <Breadcrumb display={showBtn} spacing='8px' color={'blue.600'}>
             <BreadcrumbItem>
               <BreadcrumbLink href='/header/shopprofile'>
                 Cliente
@@ -72,12 +72,15 @@ export const Header = () => {
             <BreadcrumbItem display={showBtn}>
               <BreadcrumbLink href='/header/recharges'>Recargas</BreadcrumbLink>
             </BreadcrumbItem>
+
             <BreadcrumbItem display={showBtn}>
               <BreadcrumbLink href='/header/orderlist'>Consumos</BreadcrumbLink>
             </BreadcrumbItem>
+
             <BreadcrumbItem display={showBtn}>
-              <BreadcrumbLink href='#'>PQRs</BreadcrumbLink>
+              <BreadcrumbLink href='/header/pqrs'>PQRs</BreadcrumbLink>
             </BreadcrumbItem>
+
             <BreadcrumbItem display={showBtn}>
               <BreadcrumbLink href='#'>Promociones</BreadcrumbLink>
             </BreadcrumbItem>

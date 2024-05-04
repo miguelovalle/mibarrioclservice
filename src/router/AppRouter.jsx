@@ -13,6 +13,8 @@ import { Pag5RegNeg } from '../components/register/Pag5RegNeg';
 import { PagRules } from '../components/register/PagRules';
 import { SearchList } from '../components/commerce/SearchList';
 import { ShopProfile } from '../components/commerce/ShopProfile';
+import { PqrList } from '../components/pqrs/PqrList';
+import { Sw } from '../components/header/Sw';
 
 export const AppRouter = () => {
   return (
@@ -27,12 +29,14 @@ export const AppRouter = () => {
         <Route path='/pag5' element={<Pag5RegNeg />} />
         <Route path='/pag6' element={<PagRules />} />
         <Route path='/searchtext' element={<SearchList />} />
+        <Route path='/sw' element={<Sw />} />
         <Route path='/header' element={<Header />}>
           <Route index element={<Landing />} />
           <Route path='landing' element={<Landing />} />
           <Route path='shopprofile' element={<ShopProfile />} />
           <Route path='orderlist' element={<OrderList />} />
           <Route path='recharges' element={<RechargeList />} />
+          <Route path='pqrs' element={<PqrList />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -26,21 +26,26 @@ export const ShopProfile = () => {
 
   if (isSuccess) {
     return (
-      <Flex direction={'column'} my={4} ms={6} w={450}>
+      <Flex direction={'column'} my={4} ms={8} w={450}>
         <Flex direction={'row'} justifyContent={'space-between'}>
           <Button onClick={() => handleNewShop()}>
-            <Icon as={FaRegAddressCard} boxSize={6} color={'blue.600'} />
-            <Text ml={4}>Crear Nuevo Negocio</Text>
+            <Icon as={FaRegAddressCard} boxSize={4} color={'blue.600'} />
+            <Text fontSize={'xs'} ml={4}>
+              Crear Nuevo Negocio
+            </Text>
           </Button>
           <Button
             onClick={() => {
-              sessionStorage.setItem('shopName', shop?.name);
-              sessionStorage.setItem('shopId', shop?.id);
-              setName(shop.name);
+              // sessionStorage.setItem('shopName', shop?.name);
+              // sessionStorage.setItem('shopId', shop?.id);
+              // setName(shop?.name);
+              navigate('/pag1');
             }}
           >
-            <Icon as={FaRegAddressCard} boxSize={6} color={'blue.600'} />
-            <Text ml={4}>Activar en Pantalla</Text>
+            <Icon as={FaPenToSquare} boxSize={4} color={'blue.600'} />
+            <Text fontSize={'xs'} ml={4}>
+              Actualizar Datos
+            </Text>
           </Button>
         </Flex>
 
@@ -63,19 +68,6 @@ export const ShopProfile = () => {
           <Text>E-mail: </Text>
           <Text>{shop?.email}</Text>
         </Grid>
-
-        <Button
-          mt={4}
-          onClick={() => {
-            sessionStorage.setItem('shopName', shop.name);
-            sessionStorage.setItem('shopId', shop.id);
-            setName(shop.name);
-            navigate('/pag1');
-          }}
-        >
-          <Icon as={FaPenToSquare} boxSize={6} color={'blue.600'} />
-          <Text ml={4}>Actualizar Datos</Text>
-        </Button>
       </Flex>
     );
   }
